@@ -13,23 +13,28 @@
     <!-- Grid column -->
     <div class="col-md-12">
         <ul id="menu" class="nav light-green py-4 mb-4 mb-md-0 font-weight-bold z-depth-1">
-            <li class="nav-item text-primary">
-                <a class="nav-link active white-text" href="#footer">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link white-text" href="#">Instruments</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link white-text" href="#"><i class="fa fa-shopping-cart"></i> &ensp;Cart</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link white-text" href="#"><i class="fa fa-info"></i> &ensp;About</a>
-            </li>
-            <li class="">
-                <div class="text-center">
-                    <a href="" class="btn btn-orange btn-rounded " data-toggle="modal" data-target="#modalLRForm">LogIn/Register</a>
-                </div>
-            </li>
+            <div class="col-8 ">
+                <li class="nav-item text-primary">
+                    <a class="nav-link active white-text" href="#footer">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link white-text" href="#"><i class="fa fa-shopping-cart"></i> &ensp;Cart</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link white-text" href="#"><i class="fa fa-info"></i> &ensp;About</a>
+                </li>
+                <li class="">
+                    <div class="text-center">
+
+                    </div>
+                </li>
+            </div>
+            <div class="col-4">
+                <li class="nav-item float-right">
+                    <a class="nav-link white-text" href="#">Logout</a>
+                </li>
+            </div>
+
         </ul>
     </div>
 </div>

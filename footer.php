@@ -3,7 +3,7 @@
         <div class="col-sm-12">
             <ul class="footer-nav">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Movies</a></li>
+                <li><a href="#">Instruments</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">You</a></li>
@@ -19,7 +19,7 @@
                 <li><a href="#"><i class="fa fa-rss"></i></a></li>
             </ul>
             <ul class="copyright">
-                <li>Copyright &copy; 2018 Movie Show</li>
+                <li>Copyright &copy; 2018 Musical Instrument Store !</li>
                 <li>Design by <a href="#">SUMUKHA SHARMA A &ensp; <i class="fa fa-music"></i>
         </div>
     </div>

@@ -12,28 +12,35 @@
 <div class="tab-content  pt-5 pb-0" id="myTabContentJust">
     <div class="tab-pane fade show active" id="home-just" role="tabpanel" aria-labelledby="home-tab-just">
         <div class="card-columns">
-            <!-- Card -->
-            <div class="card">
+            <?php
+            $card='';
+            for ($i=getPCount()-1;$i>=0;$i--){
+                $card.=" <!-- Card -->
+            <div class=\"card\">
 
                 <!-- Card image -->
-                <div class="card-img-">
-                    <img class="card-img-top" src="images/percussion/tabla.jpg" alt="Card image cap">
+                <div class=\"card-img-\">
+                    <img class=\"card-img-top\" src=\"images/percussion/".getPImage()[$i]."\" alt=\"Card image cap\">
                 </div>
                 <!-- Card content -->
-                <div class="card-body">
-
-
+                <div class=\"card-body\">
                     <!-- Title -->
-                    <h4 class="card-title"><a>Card title</a></h4>
+                    <h4 class=\"card-title\"><a>".getPName()[$i]."</a></h4>
                     <!-- Text -->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class=\"card-text\">".getPDescription()[$i]."</p>
                     <!-- Button -->
-                    <a href="#" class="btn btn-primary">Button</a>
+                    <p class=\"card-price\">&#8377; ".getPprice()[$i]."</p>
+                    <a href=\"cart.php?category=percussion&item=".$i."\" class=\"btn btn-primary\">Add to Cart</a>
 
                 </div>
 
             </div>
-            <!-- Card -->
+            <!-- Card -->";
+            }
+            echo $card;
+            
+            ?>
+
 
 
 
@@ -41,58 +48,72 @@
     </div>
     <div class="tab-pane fade" id="profile-just" role="tabpanel" aria-labelledby="profile-tab-just">
         <div class="card-columns">
-            <!-- Card -->
-            <div class="card">
+            <?php
+            $card='';
+            for ($i=getNPCount()-1;$i>=0;$i--){
+                $card.=" <!-- Card -->
+            <div class=\"card\">
 
                 <!-- Card image -->
-                <div class="card-img-">
-                    <img class="card-img-top" src="images/nonpercussion/bansuri.jpg" alt="Card image cap">
+                <div class=\"card-img-\">
+                    <img class=\"card-img-top\" src=\"images/nonpercussion/".getNPImage()[$i]."\" alt=\"Card image cap\">
                 </div>
                 <!-- Card content -->
-                <div class="card-body">
-
-
+                <div class=\"card-body\">
                     <!-- Title -->
-                    <h4 class="card-title"><a>Card title</a></h4>
+                    <h4 class=\"card-title\"><a>".getNPName()[$i]."</a></h4>
                     <!-- Text -->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class=\"card-text\">".getNPDescription()[$i]."</p>
                     <!-- Button -->
-                    <a href="#" class="btn btn-primary">Button</a>
+                    <p class=\"card-price\">&#8377; ".getNPprice()[$i]."</p>
+                    <a href=\"#\" class=\"btn btn-primary\">Add to Cart</a>
 
                 </div>
 
             </div>
-            <!-- Card -->
+            <!-- Card -->";
+            }
+            echo $card;
+
+            ?>
+
 
 
         </div>
     </div>
     <div class="tab-pane fade" id="contact-just" role="tabpanel" aria-labelledby="contact-tab-just">
         <div class="card-columns">
-            <!-- Card -->
-            <div class="card">
+            <?php
+            $card='';
+            for ($i=getSCount()-1;$i>=0;$i--){
+                $card.=" <!-- Card -->
+            <div class=\"card\">
 
                 <!-- Card image -->
-                <div class="card-img-">
-                    <img class="card-img-top" src="images/mandolin.jpg" alt="Card image cap">
+                <div class=\"card-img-\">
+                    <img class=\"card-img-top\" src=\"images/".getSImage()[$i]."\" alt=\"Card image cap\">
                 </div>
                 <!-- Card content -->
-                <div class="card-body">
-
-
+                <div class=\"card-body\">
                     <!-- Title -->
-                    <h4 class="card-title"><a>Card title</a></h4>
+                    <h4 class=\"card-title\"><a>".getSName()[$i]."</a></h4>
                     <!-- Text -->
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class=\"card-text\">".getSDescription()[$i]."</p>
                     <!-- Button -->
-                    <a href="#" class="btn btn-primary">Button</a>
+                    <p class=\"card-price\">&#8377; ".getSprice()[$i]."</p>
+                    <a href=\"#\" class=\"btn btn-primary\">Add to Cart</a>
 
                 </div>
 
             </div>
-            <!-- Card -->
+            <!-- Card -->";
+            }
+            echo $card;
+
+            ?>
 
 
-</div>
+
+        </div>
     </div>
 </div>

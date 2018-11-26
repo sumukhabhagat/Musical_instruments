@@ -7,8 +7,11 @@
 <head>
 <title>REGISTRATION PAGE</title>
 <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mdb.css">
+    <link rel="stylesheet" href="css/fontawesome-free-5.5.0-web/css/all.css">
 </head>
-<body background="images/pp29.gif">
+<body background="images/guitargif2.gif">
  
 <div id="main-wrapper">
 <center><h2>REGISTRATION FORM</h2>
@@ -24,8 +27,8 @@
 <input name="password" type="password" class="inputvalues" placeholder="Type your Password" required/><br>
 <label><b>CONFIRM PASSWORD:</b></label><br>
 <input name="cpassword" type="password" class="inputvalues" placeholder="Confirm Password" required/><br>
-<input name="submit_btn" type="submit" id="signup_btn" value="Sign Up"/><br>
-<a href="login.php"><input type="button" id="back_btn" value="<< Back to Login"/></a>
+<input name="submit_btn" type="submit" id="signup_btn" value="Sign Up"/>
+<a href="login.php" class="btn btn-deep-orange"><< Back to Login</a>
 </form>
 	<?php
 		if(isset($_POST['submit_btn']))
@@ -53,7 +56,7 @@
 				    $stmt=$conn->prepare("insert into user(username,email,password) values(:username,:email,:password)");
 				    $stmt->bindParam("username",$username);
                     $stmt->bindParam("email",$email);
-                    $stmt->bindParam("password",$password);
+                    $stmt->bindParam("password",md5($password));
                    $rStatus=$stmt->execute();
 
 

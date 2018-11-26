@@ -15,13 +15,13 @@
         <ul id="menu" class="nav light-green py-4 mb-4 mb-md-0 font-weight-bold z-depth-1">
             <div class="col-8 ">
                 <li class="nav-item text-primary">
-                    <a class="nav-link active white-text" href="#footer">Home</a>
+                    <a class="nav-link active white-text" href="index.php"><i class="fa fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link white-text" href="#"><i class="fa fa-shopping-cart"></i> &ensp;Cart</a>
+                    <a class="nav-link white-text" href="cart.php"><i class="fa fa-shopping-cart"></i> &ensp;Cart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link white-text" href="#"><i class="fa fa-info"></i> &ensp;About</a>
+                    <a class="nav-link white-text" href="about.php"><i class="fa fa-info"></i> &ensp;About</a>
                 </li>
                 <li class="">
                     <div class="text-center">
@@ -31,7 +31,7 @@
             </div>
             <div class="col-4">
                 <li class="nav-item float-right">
-                    <a class="nav-link white-text" href="#">Logout</a>
+                    <a class="nav-link white-text">Logout</a>
                 </li>
             </div>
 

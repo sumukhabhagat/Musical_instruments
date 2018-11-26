@@ -1,4 +1,4 @@
-<?php
+n<?php
 require 'config.php';
 try{
     $conn = new PDO("mysql:dbname=".$db.";host=".$host.";charset=utf8",$user,$pass);

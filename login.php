@@ -1,4 +1,5 @@
 <?php
+session_start();
 	require 'dbconfig/config.php';
 
 ?>
@@ -7,6 +8,9 @@
 <head>
 <title>LOGIN PAGE</title>
 <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mdb.css">
+    <link rel="stylesheet" href="css/fontawesome-free-5.5.0-web/css/all.css">
 </head>
 <body  background="images/music3.jpg">
  
@@ -33,7 +37,7 @@
 
 		$stmt=$conn->prepare("select * from user WHERE username=:username AND password=:password");
 		$stmt->bindParam("username",$username);
-        $stmt->bindParam("password",$password);
+        $stmt->bindParam("password",md5($password));
         $stmt->execute();
 
 

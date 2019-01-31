@@ -31,7 +31,7 @@
             </div>
             <div class="col-4">
                 <li class="nav-item float-right">
-                    <a class="nav-link white-text">Logout</a>
+                    <a href="logout.php" class="nav-link white-text">Logout</a>
                 </li>
             </div>
 

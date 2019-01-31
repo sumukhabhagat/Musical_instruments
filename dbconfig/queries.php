@@ -31,7 +31,7 @@ function getNPName(){
 
 function getSName(){
     global $conn;
-    $stmt=$conn->query('select name from string');
+    $stmt=$conn->query('call r1');
     return $stmt->fetchAll(PDO::FETCH_COLUMN,0);
 }
 
@@ -92,8 +92,35 @@ function getSCount(){
 
 function getPCart(){
     global $conn;
-    $stmt=$conn->query('select p.name,p.price,o.quantity,o.totalamt,o.address from orders o,percussion p where o.product_id=p.percussion_id');
+    $cat='percussion';
+    $user=$_SESSION['user_id'];
+    $stmt=$conn->prepare('select p.name,p.price,o.quantity,o.totalamt,o.address from orders o,percussion p where o.product_id=p.percussion_id and o.category=:cat and o.user_id=:user');
+    $stmt->bindParam('cat',$cat);
+    $stmt->bindParam('user',$user);
+    $stmt->execute();
     return $stmt->fetchAll();
 }
 
-//var_dump(getPCart());
+function getNPCart(){
+    global $conn;
+    $cat='non_percussion';
+    $user=$_SESSION['user_id'];
+    $stmt=$conn->prepare('select np.name,np.price,o.quantity,o.totalamt,o.address from orders o,non_percussion np where o.product_id=np.non_percussion_id and o.category=:cat and o.user_id=:user');
+    $stmt->bindParam('cat',$cat);
+    $stmt->bindParam('user',$user);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
+function getSCart(){
+    global $conn;
+    $cat='string';
+    $user=$_SESSION['user_id'];
+    $stmt=$conn->prepare('select s.name,s.price,o.quantity,o.totalamt,o.address from orders o,string s where o.product_id=s.string_id and o.category=:cat and o.user_id=:user');
+    $stmt->bindParam('cat',$cat);
+    $stmt->bindParam('user',$user);
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
+//var_dump(getSName());

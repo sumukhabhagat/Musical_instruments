@@ -41,9 +41,6 @@
             
             ?>
 
-
-
-
         </div>
     </div>
     <div class="tab-pane fade" id="profile-just" role="tabpanel" aria-labelledby="profile-tab-just">
@@ -66,7 +63,7 @@
                     <p class=\"card-text\">".getNPDescription()[$i]."</p>
                     <!-- Button -->
                     <p class=\"card-price\">&#8377; ".getNPprice()[$i]."</p>
-                    <a href=\"#\" class=\"btn btn-primary\">Add to Cart</a>
+                    <a href=\"cart.php?category=non_percussion&item=".$i."\" class=\"btn btn-primary\">Add to Cart</a>
 
                 </div>
 
@@ -76,8 +73,6 @@
             echo $card;
 
             ?>
-
-
 
         </div>
     </div>
@@ -101,18 +96,14 @@
                     <p class=\"card-text\">".getSDescription()[$i]."</p>
                     <!-- Button -->
                     <p class=\"card-price\">&#8377; ".getSprice()[$i]."</p>
-                    <a href=\"#\" class=\"btn btn-primary\">Add to Cart</a>
+                    <a href=\"cart.php?category=string&item=".$i."\" class=\"btn btn-primary\">Add to Cart</a>
 
                 </div>
-
             </div>
             <!-- Card -->";
             }
             echo $card;
-
             ?>
-
-
 
         </div>
     </div>
